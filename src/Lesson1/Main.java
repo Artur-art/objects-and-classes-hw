@@ -1,5 +1,4 @@
 package Lesson1;
-
 public class Main {
     public static void main(String[] args) {
         Author TakashiShimizu = new Author("Takashi","Shimizu");
@@ -8,6 +7,12 @@ public class Main {
         System.out.println("автор книги " + TakashiShimizu);
         juOnTheGrudge.setYearsOfRelease(2008);
         System.out.println(juOnTheGrudge);
+        System.out.println(TakashiShimizu.toString());
+        System.out.println(juOnTheGrudge.toString());
 
     }
 }
+
+
+
+
