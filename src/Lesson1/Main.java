@@ -8,6 +8,7 @@ public class Main {
         System.out.println("автор книги " + TakashiShimizu);
         juOnTheGrudge.setYearsOfRelease(2008);
         System.out.println(juOnTheGrudge);
+        System.out.println("are you ready?");
 
     }
 }
