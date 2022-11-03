@@ -1,15 +1,18 @@
+
 package Lesson1;
+
+import java.util.Objects;
+
 public class Book {
+    private Author author;
     private String books;
     private int yearsOfRelease;
-    private Author author;
+
 
     public Book(String books, Author author, int yearsOfRelease) {
 
         this.books = books;
         this.yearsOfRelease = yearsOfRelease;
-        this.author = author;
-
     }
 
 
@@ -22,11 +25,20 @@ public class Book {
     public void setYearsOfRelease(int yearsOfRelease){
         this.yearsOfRelease = yearsOfRelease;
     }
-        public String toString () {
-            return "Название книги " + books + " " + yearsOfRelease;
-        }
-        public Author getAuthor () {
-            return author;
-        }
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass())return false;
+        Book book = (Book) o;
+        return yearsOfRelease == book.yearsOfRelease && Objects.equals(author,book.author) && Objects.equals(books,book.books);
     }
+    @Override
+    public int hashCode(){
+        return Objects.hash(author,books,yearsOfRelease);
+    }
+
+    }
+
+
+
 
